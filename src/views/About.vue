@@ -4,3 +4,18 @@
     <h2>merge测试</h2>
   </div>
 </template>
+
+<script>
+export default {
+name: 'About',
+  data () {
+    return {
+    };
+  },
+
+  methods: {}
+}
+
+</script>
+<style lang='sass' scoped>
+</style>
