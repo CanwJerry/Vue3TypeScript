@@ -64,7 +64,7 @@ let number2 = 222;
 
 
 //----------------------------------------函数相关类型----------------------------------------
-function add(first: number, second: number): number { // ": number" 函数的返回值应该是数字
+function addss(first: number, second: number): number { // ": number" 函数的返回值应该是数字
   return first + second;
 }
 
