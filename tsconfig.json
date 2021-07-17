@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
-    "strict": true,
+    "strict": true, // 严格方式
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
@@ -11,8 +11,14 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "sourceMap": true,
+    "sourceMap": true, // 信息文件，存储着位置信息，源代码到编译后代码的映射
     "baseUrl": ".",
+    // "noUnusedLocals": true, // 没有使用的变量不进行打包
+    // "noUnusedParameters": true, // 没有使用的方法给提示出来
+    // "noImplicitAny": false, // 允许你的注解类型any不用特意标明
+    // "strictNullChecks": false, // 允许有null值出现 (const jsss: string = null;)
+    // "rootDir": "src/**/*.ts" //入口文件
+    // "outDir": "./build" //编译好的文件
     "types": [
       "webpack-env"
     ],
