@@ -13,7 +13,7 @@
 // getResume('大脚', 18, 94);
 
 // 利用ts修改
-interface Girl {
+interface Girlss {
   name: string;
   age: number;
   bust: number;
@@ -23,7 +23,7 @@ interface Girl {
 }
 
 // interface 继承
-interface Teacher extends Girl {
+interface Teacherss extends Girlss {
   teach(): string;
 }
 
@@ -31,7 +31,7 @@ interface Teacher extends Girl {
 // 接口不止可以限制对象，还可以限制类
 // type Girl1 = string;
 
-class Xiaojiejie implements Girl {
+class Xiaojiejie implements Girlss {
   name = '刘英';
   age = 18;
   bust = 94;
@@ -54,12 +54,12 @@ const girl = {
   }
 }
 
-const screenResume = (girl : Girl) => {
+const screenResume = (girl : Girlss) => {
   girl.age < 24 && girl.bust >= 90 && console.log(girl.name + '进入面试');
   girl.age >= 24 || girl.bust < 90 && console.log(girl.name + '你被淘汰');
 }
 
-const getResume = (girl : Teacher) => {
+const getResume = (girl : Teacherss) => {
   console.log(girl.name + '年龄是' + girl.age);
   console.log(girl.name + '胸围是' + girl.bust);
   girl.waistline && console.log(girl.name + '胸围是' + girl.waistline);

@@ -14,7 +14,7 @@ const xiaohong: XiaoJieJie = {
 
 // 对象类型，数组类型，类类型，函数类型
 // 对象类型
-const xiaohuang : {
+const xiaohuang: {
   name: String,
   age: Number
 } = {
@@ -23,11 +23,11 @@ const xiaohuang : {
 };
 
 // 数组类型
-const xiaobing : string [] = ['name', 'age'];
+const xiaobing: string[] = ['name', 'age'];
 
 // 类类型
 class Personss {};
-const dajiao : Personss = new Personss();
+const dajiao: Personss = new Personss();
 
 // 函数类型
-const dajiaoya : () => String = () => {return 'name'};
+const dajiaoya: () => String = () => { return 'name' };

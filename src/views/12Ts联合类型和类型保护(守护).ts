@@ -38,10 +38,10 @@ function judgeWho3(first: string | number, second: string | number) {
 
 // 使用instanceof 而且 instanceof只能使用在类上
 class NumberObjs {
-  counta: number;
+  counta: number | undefined;
 }
 
-function add(first: object | NumberObjs, second: object | NumberObjs) {
+function adds(first: object | NumberObjs, second: object | NumberObjs) {
   if(first instanceof NumberObjs && second instanceof NumberObjs) {
     return first.counta + second.counta;
   }

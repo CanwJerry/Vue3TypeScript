@@ -5,7 +5,7 @@
 // }
 // const totals = getCount(1, 2);
 
-function sayHello() : void{ //void 没有返回值
+function sayHellos() : void{ //void 没有返回值
   console.log('hello world');
 }
 
@@ -20,10 +20,10 @@ function forNever() : never{ //never 永远执行不完
 }
 
 // 对象的类型注解写法
-function add({one, two} : {one : number, two : number}) {
+function addas({one, two} : {one : number, two : number}) {
   return one + two;
 }
-const totalss = add({one: 1, two: 2});
+const totalss = addas({one: 1, two: 2});
 
 function getNumber({one} : {one: number}) {
   return one;

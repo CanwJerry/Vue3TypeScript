@@ -9,7 +9,7 @@ class Personsss {
   constructor(public name: string) {}
 }
 
-class Teacherss extends Personsss {
+class Teacherssss extends Personsss {
   constructor(public age: number) {
     // 只要在子类中使用了构造函数就要调用super，就算父类没有写构造函数
     super('teach');
@@ -18,6 +18,6 @@ class Teacherss extends Personsss {
 
 const person = new Personsss('jspang');
 
-const teachs = new Teacherss(18);
+const teachs = new Teacherssss(18);
 console.log(teachs.name);
 console.log(teachs.age);
