@@ -83,7 +83,7 @@
 
 //----------------------------------- 访问器的装饰器  -----------------------------------
 // function visitDecorator(target:any, key: string, descriptor: PropertyDescriptor) {
-  
+
 // }
 
 // class Test {
@@ -140,13 +140,13 @@
 //----------------------------------- 装饰器实际使用例子  -----------------------------------
 const userInfos: any = undefined;
 
-function catchError(msg: string) {
+function catchErrorss(msg: string) {
   return function (target: any, key: string, descriptor: PropertyDescriptor) {
     const fn = descriptor.value;
-    descriptor.value = function() {
+    descriptor.value = function () {
       try {
         fn();
-      }catch(e) {
+      } catch (e) {
         console.log(msg);
       }
     }
@@ -154,15 +154,15 @@ function catchError(msg: string) {
 }
 
 class Testss {
-  @catchError('userInfos.name 不存在')
+  @catchErrorss('userInfos.name 不存在')
   getName() {
     return userInfos.name;
   }
-  @catchError('userInfos.age 不存在')
+  @catchErrorss('userInfos.age 不存在')
   getAge() {
     return userInfos.age;
   }
-  @catchError('userInfos.gentle 不存在')
+  @catchErrorss('userInfos.gentle 不存在')
   gentle() {
     return userInfos.gentle;
   }
