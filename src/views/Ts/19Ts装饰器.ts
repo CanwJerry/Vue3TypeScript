@@ -83,7 +83,7 @@
 
 //----------------------------------- 访问器的装饰器  -----------------------------------
 // function visitDecorator(target:any, key: string, descriptor: PropertyDescriptor) {
-
+  
 // }
 
 // class Test {
@@ -138,37 +138,37 @@
 // text.getInfo('dell', 30);
 
 //----------------------------------- 装饰器实际使用例子  -----------------------------------
-const userInfos: any = undefined;
+const userInfosss: any = undefined;
 
-function catchErrorss(msg: string) {
+function catchErrorsss(msg: string) {
   return function (target: any, key: string, descriptor: PropertyDescriptor) {
     const fn = descriptor.value;
-    descriptor.value = function () {
+    descriptor.value = function() {
       try {
         fn();
-      } catch (e) {
+      }catch(e) {
         console.log(msg);
       }
     }
   }
 }
 
-class Testss {
-  @catchErrorss('userInfos.name 不存在')
+class Testsss {
+  @catchErrorsss('userInfosss.name 不存在')
   getName() {
-    return userInfos.name;
+    return userInfosss.name;
   }
-  @catchErrorss('userInfos.age 不存在')
+  @catchErrorsss('userInfosss.age 不存在')
   getAge() {
-    return userInfos.age;
+    return userInfosss.age;
   }
-  @catchErrorss('userInfos.gentle 不存在')
+  @catchErrorsss('userInfosss.gentle 不存在')
   gentle() {
-    return userInfos.gentle;
+    return userInfosss.gentle;
   }
 }
 
-const textsss = new Testss();
+const textss = new Testsss();
 text.getName();
 text.getAge();
 text.gentle();
